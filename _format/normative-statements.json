@@ -1,11 +1,17 @@
----
-layout: null
----
-{% capture json %}
-{% for spec_draft in site.format %}
-  {% if spec_draft.version == site.latest_version %}
-    {% unless spec_draft.path contains 'index' %}
-      {{ spec_draft.content|strip }}
-    {% endunless %}
-  {% endif %}
-{% endfor %}{% endcapture %}{{ json|strip }}
+[{
+        "username": "john",
+        "firstName": "John",
+        "lastName": "Doe",
+        "gender": "Male",
+        "profileURL": "img/male.png",
+        "email": "john.doe@example.com"
+    },
+    {
+        "username": "jane",
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "gender": "Female",
+        "profileURL": "img/female.png",
+        "email": "jane.doe@example.com"
+    }
+]
